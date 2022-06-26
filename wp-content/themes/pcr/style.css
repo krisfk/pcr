@@ -1192,7 +1192,8 @@ input[name='subscribe-other'] {
 
 .lightbox-content {
     display: block;
-    max-width: 90%;
+    /* max-width: 90%; */
+    max-width: 800px;
     /* height: 100px; */
     max-height: 70%;
     background: #fff;
