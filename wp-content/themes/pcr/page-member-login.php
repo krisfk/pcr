@@ -52,7 +52,7 @@ get_header();
                 <tr>
                     <td></td>
                     <td class="text-end">
-                        <a class="login-a" href="/registration/"> 會員註冊</a>
+                        <!-- <a class="login-a" href="/registration/"> 會員註冊</a> -->
                         <a class="login-a" href="/forget-pw/"> 忘記密碼</a>
 
                     </td>
