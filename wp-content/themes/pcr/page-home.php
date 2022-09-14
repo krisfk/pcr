@@ -493,7 +493,7 @@ session_start();
                     if(!$_SESSION['user_id'])
                     {
                         ?>
-                    <a class="sub-menu-a" href="/registration/"> 會員註冊</a>
+                    <!-- <a class="sub-menu-a" href="/registration/"> 會員註冊</a> -->
 
                     <a class="sub-menu-a" href="/forget-pw/"> 忘記密碼</a>
 
