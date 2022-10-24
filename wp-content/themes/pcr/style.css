@@ -1286,6 +1286,8 @@ input[name='subscribe-other'] {
     color: #f00;
 }
 
+.test4 {}
+
 @media only screen and (max-width: 1400px) {
     .category-bottom-article-block-a {
         width: 47%;
@@ -1327,6 +1329,7 @@ input[name='subscribe-other'] {
         margin: 0 0 25px 0 !important;
     }
     .top-menu-ul {
+        overflow: auto;
         padding: 0;
         margin: 0;
         font-size: 20px;
