@@ -1286,8 +1286,6 @@ input[name='subscribe-other'] {
     color: #f00;
 }
 
-.test4 {}
-
 @media only screen and (max-width: 1400px) {
     .category-bottom-article-block-a {
         width: 47%;
