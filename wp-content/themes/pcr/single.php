@@ -148,7 +148,7 @@ get_header();
 
                     ?>
 
-        <div>
+        <div class="article-main-content">
 
             <?php 
         
