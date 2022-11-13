@@ -35,6 +35,13 @@ session_start();
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
     </script>
 
+
+    <script type="text/javascript">
+    $(function() {
+
+        $('.paid-items').closest('li').fadeOut(0);
+    })
+    </script>
     <?php 
     if($_SESSION['user_id'])
     {
