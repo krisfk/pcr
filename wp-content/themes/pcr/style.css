@@ -781,14 +781,14 @@ input[type='search'] {
 
 .tagcloud li a {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 2px;
     /* background: #ccb7ac; */
     color: #fe5e04;
     border-radius: 0;
-    text-decoration: none;
-    background: #fe5e04;
-    border: 2px solid #fe5e04;
-    color: #fff;
+    text-decoration: underline;
+    /* background: #fe5e04; */
+    /* border: 2px solid #fe5e04; */
+    color: #fe5e04;
 }
 
 .tagcloud li a:hover {
