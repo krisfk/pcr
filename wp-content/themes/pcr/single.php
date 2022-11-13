@@ -83,6 +83,8 @@ get_header();
                    ?>
         <div class="inner-container">
 
+
+
             <div class="mb-5 text-center">
                 <?php                     echo '本文章<b>('.get_the_title().')</b>需要申請成為PCR員會才可閱讀。';
 ?>
@@ -106,16 +108,53 @@ get_header();
 
 
             </div>
+
+
         </div>
         <?php
                     
                 }
                 else
                 {
+
+                    $show_article=true;
+
+                    if(get_field('paid_membership_only'))
+                    {
+                        
+                        if(get_field('paid_membership',$_SESSION['user_id']))
+                        {
+                                //check expire
+                        }
+                        else
+                        {
+                            $show_article=false;
+                            ?>
+        <div class="inner-container">
+            <div class="mb-5 text-center">
+                <?php                     
+                echo '本文章<b>('.get_the_title().')</b>需要申請成為PCR付費員會才可閱讀。';
+                ?>
+            </div>
+        </div>
+        <?php
+                        }
+                     // is paid member
+                     // check expire
+                     
+                     // is not paid member   
+                    }
+
+
                     ?>
-        <?php echo do_shortcode(' [addtoany] '); ?>
-        <!--  -->
+
+
         <?php 
+        
+
+         
+        echo do_shortcode(' [addtoany] '); 
+ 
 
         if($_SESSION['user_id'])
         {
@@ -130,19 +169,11 @@ get_header();
 
         <div class="inner-container">
 
-
-
-
-
-
-
             <?php
 
         if(get_field('half_public_post'))
         {
-
-            
-           if(!$_SESSION['user_id'])
+          if(!$_SESSION['user_id'])
            {
 
             echo get_field('half_public_post_snipper_of_full_content');
@@ -158,17 +189,14 @@ get_header();
             <?php
                echo get_the_content();
            }
-        //    exit();
 
+           
             ?>
 
 
             <?php
 
-// exit();
-
-            // echo 1;
-        }
+}
         else
         {
          
@@ -346,6 +374,8 @@ if($_SESSION['user_id'])
 
 
     </div>
+
+
 
 </main>
 
