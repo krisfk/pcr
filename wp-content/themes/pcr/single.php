@@ -148,7 +148,7 @@ get_header();
 
                     ?>
 
-        <div class="article-main-content">
+        <div class="article-main-content <?php echo $show_article ? '':'d-none';?>">
 
             <?php 
         
