@@ -811,6 +811,7 @@ input[type='search'] {
     top: 0;
     color: #fe5e04;
     text-align: left;
+    font-size: 0.9rem;
 }
 
 .tags-div .tags {
