@@ -148,8 +148,9 @@ get_header();
 
                     ?>
 
+        <div>
 
-        <?php 
+            <?php 
         
 
          
@@ -160,16 +161,16 @@ get_header();
         {
             
         ?>
-        <div class="text-center mt-3 mb-3">
-            <a href="javascript:void(0);" class="add-to-fav-btn <?php echo $bookmarked ? 'active':'';?>"></a>
-        </div>
-        <?php
+            <div class="text-center mt-3 mb-3">
+                <a href="javascript:void(0);" class="add-to-fav-btn <?php echo $bookmarked ? 'active':'';?>"></a>
+            </div>
+            <?php
         }
         ?>
 
-        <div class="inner-container">
+            <div class="inner-container">
 
-            <?php
+                <?php
 
         if(get_field('half_public_post'))
         {
@@ -178,15 +179,15 @@ get_header();
 
             echo get_field('half_public_post_snipper_of_full_content');
             ?>
-            <div class="mb-5 mt-5">此為會員限定內容，你可 <a href="<?php echo get_site_url();?>/registration/"
-                    class="want-read-btn">會員註冊</a> 或 <a href="<?php echo get_site_url();?>/member-login/"
-                    class="want-read-btn">會員登入</a> 再觀看這文章內容。</div>
-            <?php
+                <div class="mb-5 mt-5">此為會員限定內容，你可 <a href="<?php echo get_site_url();?>/registration/"
+                        class="want-read-btn">會員註冊</a> 或 <a href="<?php echo get_site_url();?>/member-login/"
+                        class="want-read-btn">會員登入</a> 再觀看這文章內容。</div>
+                <?php
            }
            else
            {
                ?>
-            <?php
+                <?php
                echo get_the_content();
            }
 
@@ -194,7 +195,7 @@ get_header();
             ?>
 
 
-            <?php
+                <?php
 
 }
         else
@@ -202,84 +203,84 @@ get_header();
          
             ?>
 
-            <?php 
+                <?php 
 if(!get_field('is_mc_test'))
 {
     ?>
 
-            <?php 
+                <?php 
 if(get_field('parent_read_content'))
 {
     ?>
-            <div class="text-center mt-5 mb-5">
+                <div class="text-center mt-5 mb-5">
 
-                <a href="javascrpt:void(0);" class="parent-read-btn">
-                    <!-- 家長導讀 -->
-                    <img src="<?php echo get_template_directory_uri() .'/assets/images/ParentButton.png'?>" alt="">
-                </a>
-            </div>
+                    <a href="javascrpt:void(0);" class="parent-read-btn">
+                        <!-- 家長導讀 -->
+                        <img src="<?php echo get_template_directory_uri() .'/assets/images/ParentButton.png'?>" alt="">
+                    </a>
+                </div>
 
-            <?php
+                <?php
 }
 ?>
 
-            <?php
+                <?php
 }
 else
 {
     ?>
-            <div class="mt-5"></div>
-            <?php
+                <div class="mt-5"></div>
+                <?php
 }
 ?>
 
 
-            <?php
+                <?php
             echo get_the_content();
             ?>
 
-            <?php 
+                <?php 
 if(get_field('is_mc_test'))
 {
     ?>
-            <div class="row gx-5 align-items-center">
+                <div class="row gx-5 align-items-center">
 
 
-                <?php
+                    <?php
 
     if( have_rows('questions_and_answers') ){
     $idx=1;
     while ( have_rows('questions_and_answers') ) { the_row();
         ?>
 
-                <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2">Q<?php echo $idx;?>:
-                    <?php echo get_sub_field('question');?></div>
-                <div class="col-lg-6 col-md-7 col-sm-12 col-12 mb-2 ">
+                    <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2">Q<?php echo $idx;?>:
+                        <?php echo get_sub_field('question');?></div>
+                    <div class="col-lg-6 col-md-7 col-sm-12 col-12 mb-2 ">
 
 
-                    <div class="row">
+                        <div class="row">
 
-                        <div class="col-6 selected-col"> <input class="form-check-input mt-1 me-1" type="radio"
-                                name="a<?php echo $idx;?>" id="a<?php echo $idx;?>-1"
-                                value="<?php echo get_sub_field('answer_left_score');?>">
-                            <label class="form-check-label me-3" for="a<?php echo $idx;?>-1">
-                                <?php echo get_sub_field('answer_left');?>
-                            </label>
+                            <div class="col-6 selected-col"> <input class="form-check-input mt-1 me-1" type="radio"
+                                    name="a<?php echo $idx;?>" id="a<?php echo $idx;?>-1"
+                                    value="<?php echo get_sub_field('answer_left_score');?>">
+                                <label class="form-check-label me-3" for="a<?php echo $idx;?>-1">
+                                    <?php echo get_sub_field('answer_left');?>
+                                </label>
+                            </div>
+                            <div class="col-6 selected-col"> <input class="form-check-input mt-1 me-1" type="radio"
+                                    name="a<?php echo $idx;?>" id="a<?php echo $idx;?>-2"
+                                    value="<?php echo get_sub_field('answer_right_score');?>">
+                                <label class="form-check-label me-3" for="a<?php echo $idx;?>-2">
+                                    <?php echo get_sub_field('answer_right');?>
+                                </label>
+                            </div>
                         </div>
-                        <div class="col-6 selected-col"> <input class="form-check-input mt-1 me-1" type="radio"
-                                name="a<?php echo $idx;?>" id="a<?php echo $idx;?>-2"
-                                value="<?php echo get_sub_field('answer_right_score');?>">
-                            <label class="form-check-label me-3" for="a<?php echo $idx;?>-2">
-                                <?php echo get_sub_field('answer_right');?>
-                            </label>
-                        </div>
+
+
+
+
                     </div>
-
-
-
-
-                </div>
-                <?php
+                    <?php
 
         $idx++;
    
@@ -289,46 +290,46 @@ if(get_field('is_mc_test'))
 $question_num=$idx;
 ?>
 
-                <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2 text-end mt-3"></div>
-                <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2 mt-3">
+                    <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2 text-end mt-3"></div>
+                    <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2 mt-3">
 
-                    <div class="error"></div>
-                </div>
-
-
-                <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2 text-end mt-3">總分</div>
-                <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2 mt-3">
-
-
-                    <div class="row align-items-center">
-
-                        <div class="col-6 answer-block answer-block-1">
-
-                        </div>
-                        <div class="col-6  answer-block answer-block-2">
-
-                        </div>
+                        <div class="error"></div>
                     </div>
 
 
+                    <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2 text-end mt-3">總分</div>
+                    <div class="col-lg-6 col-md-5 col-sm-12 col-12 mb-2 mt-3">
+
+
+                        <div class="row align-items-center">
+
+                            <div class="col-6 answer-block answer-block-1">
+
+                            </div>
+                            <div class="col-6  answer-block answer-block-2">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="text-center">
 
-            <div class="text-center">
+                    <a href="javascript:void(0);" class="submit-test-btn mt-4">提交答案</a>
 
-                <a href="javascript:void(0);" class="submit-test-btn mt-4">提交答案</a>
+                </div>
 
-            </div>
-
-            <div class="test-result mt-5">
-                <?php echo get_field('test_results');?>
-            </div>
-            <?php
+                <div class="test-result mt-5">
+                    <?php echo get_field('test_results');?>
+                </div>
+                <?php
 }
 ?>
 
-            <?php
+                <?php
 
             
             // echo 999;
@@ -337,39 +338,40 @@ $question_num=$idx;
 // echo get_the_content();
 
 ?>
-        </div>
+            </div>
 
-        <?php
+            <?php
 
 if(has_tag()) {
     ?>
 
-        <div class="tags-div">Tags:
-            <?php is_single() && the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ) ?>
-        </div>
-        <?php
+            <div class="tags-div">Tags:
+                <?php is_single() && the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ) ?>
+            </div>
+            <?php
             }            ?>
 
-        <?php echo do_shortcode(' [addtoany] '); ?>
+            <?php echo do_shortcode(' [addtoany] '); ?>
 
-        <?php 
+            <?php 
 
 if($_SESSION['user_id'])
 {
     
 ?>
-        <div class="text-center mt-3 mb-3">
-            <a href="javascript:void(0);" class="add-to-fav-btn <?php echo $bookmarked ? 'active':'';?>"></a>
-        </div>
-        <?php
+            <div class="text-center mt-3 mb-3">
+                <a href="javascript:void(0);" class="add-to-fav-btn <?php echo $bookmarked ? 'active':'';?>"></a>
+            </div>
+            <?php
 }
 ?>
 
-        <?php
+            <?php
                 }
         // } 
         ?>
 
+        </div>
 
 
 
