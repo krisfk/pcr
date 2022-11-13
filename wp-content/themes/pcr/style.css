@@ -1290,6 +1290,10 @@ input[name='subscribe-other'] {
     color: #f00;
 }
 
+.hide-item {
+    display: none;
+}
+
 @media only screen and (max-width: 1400px) {
     .category-bottom-article-block-a {
         width: 47%;
