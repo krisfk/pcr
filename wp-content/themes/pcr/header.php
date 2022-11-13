@@ -90,7 +90,7 @@ session_start();
                 <?php
         
         $main_menu = wp_get_menu_array('main menu');
-        print_r($menu_item);
+        // print_r($menu_item);
 
         foreach ($main_menu as $menu_item) {
 
