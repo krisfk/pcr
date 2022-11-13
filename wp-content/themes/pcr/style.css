@@ -780,6 +780,7 @@ input[type='search'] {
 }
 
 .tagcloud li a {
+    font-size: 0.9rem;
     display: inline-block;
     padding: 0 2px;
     /* background: #ccb7ac; */
@@ -796,6 +797,7 @@ input[type='search'] {
 }
 
 .tags-div {
+    font-size: 0.9rem;
     color: #fe5e04;
     text-align: center;
     margin: 0 0 30px 0;
