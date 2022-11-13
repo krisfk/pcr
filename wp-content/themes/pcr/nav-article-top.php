@@ -97,7 +97,7 @@
                     if($tags)
                     {
 ?>
-    <div class="tags-div col-lg-4 col-md-12 col-sm-12 col-12  ">
+    <div class="tags-div col-lg-12 col-md-12 col-sm-12 col-12  ">
 
         <div class="row">
 
