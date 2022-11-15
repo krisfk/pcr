@@ -157,7 +157,9 @@ get_header();
                                 
                                 $open_to_paid_membership_codes_arr = get_field('open_to_paid_membership_codes');
                                 // print_r($open_to_paid_membership_codes_arr);
-                                echo $open_to_paid_membership_codes_arr[0]['paid_membership_code'];
+                                // echo $open_to_paid_membership_codes_arr[0]['paid_membership_code'];
+
+                                echo array_search('ABCDE',$open_to_paid_membership_codes_arr,true);
 
                             }
 
