@@ -80,7 +80,7 @@ require('../wp-load.php');
 
             ?>
             <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;'
-                value="<?php echo date("Y/m/d");?> - <?php echo date("Y/m/d");?>" />
+                value="<?php echo date("d/m/Y");?> - <?php echo date("d/m/Y");?>" />
             <span id='i' class="fa fa-calendar"></span>
             <div id='ccc'></div>
 
