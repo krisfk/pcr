@@ -55,7 +55,7 @@ require('../wp-load.php');
 
                     
                 );
-                
+                // 
                 // The Query
                 $the_query = new WP_Query( $query_args );
                 
