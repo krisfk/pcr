@@ -78,27 +78,6 @@ $result = mysqli_query($conn, $query);
 
 
 ?>
-    <div class="container">
-
-        <div class="row">
-            <?php
-    while($row = mysqli_fetch_assoc($result))
-    {
-     ?>
-
-            <div class="col-4"><?php echo $row['user_id'];?></div>
-            <div class="col-4">user_email</div>
-            <div class="col-4">datetime</div>
-            <div class="col-4">IP</div>
-
-            <?php   
-    }
-
-
-
-?>
-        </div>
-    </div>
 
 
     <div class="text-center mt-4">
@@ -122,25 +101,6 @@ $result = mysqli_query($conn, $query);
             <span id='i' class="fa fa-calendar"></span>
             <div id='ccc'></div>
 
-            <!-- 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                    value="option1" />
-                <label class="form-check-label" for="inlineRadio1">Today Traffic (<?php echo date("Y/m/d");?>)</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                    value="option2" />
-                <label class="form-check-label" for="inlineRadio2">
-
-                    <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;' />
-                    <span id='i' class="fa fa-calendar"></span>
-                    <div id='ccc'></div>
-
-                </label>
-            </div> -->
-
 
 
         </div>
@@ -148,20 +108,26 @@ $result = mysqli_query($conn, $query);
 
     <div class="container mt-4">
 
-        <div class="row justify-content-center">
-
+        <div class="row">
             <?php
-        
-     
-   
-    
-    
-    ?>
-            <div class=""></div>
+    while($row = mysqli_fetch_assoc($result))
+    {
+     ?>
+
+            <div class="col-4"><?php echo $row['user_id'];?></div>
+            <div class="col-4">user_email</div>
+            <div class="col-4">datetime</div>
+            <div class="col-4">IP</div>
+
+            <?php   
+    }
 
 
+
+?>
         </div>
     </div>
+
 
     <script type="text/javascript">
     $(function() {
