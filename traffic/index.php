@@ -113,8 +113,9 @@ require('../wp-load.php');
                     while ( $the_query->have_posts() ) {
                         $the_query->the_post();
                     }
+                    echo get_the_title();
                     ?>
-                d
+
                 <?php
                     /* Restore original Post Data */
                     wp_reset_postdata();
