@@ -95,7 +95,7 @@ require('../wp-load.php');
             <div class="col-5 blk member-col">
                 <h5>Members()</h5>
 
-                <ul>
+                <>
                     <?php
                 
                 $query_args = array(
@@ -128,12 +128,12 @@ require('../wp-load.php');
                             </div>
                         </div>
                     </li>
-                </ul>
-                <?php
+
+                    <?php
                     }
                     ?>
 
-                <?php
+                    <?php
                     /* Restore original Post Data */
                     wp_reset_postdata();
                 } else {
@@ -141,7 +141,7 @@ require('../wp-load.php');
                 }
                 
                 ?>
-                </ul>
+                    </ul>
             </div>
         </div>
     </div>
