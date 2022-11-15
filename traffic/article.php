@@ -51,6 +51,8 @@
             })
             .bind('datepicker-change', (e, data) => {
                 $('#out').val(data.value);
+                console.log(data);
+
             })
     })
     </script>
