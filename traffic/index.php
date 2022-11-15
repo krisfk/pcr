@@ -34,7 +34,7 @@ require('../wp-load.php');
         <div class="row justify-content-center  gx-3">
 
 
-            <div class="col-5 articles-col blk">
+            <div class="col-6 articles-col blk">
                 <h5>Articles(<span class="num"></span>)
 
                     <?php
@@ -92,7 +92,7 @@ require('../wp-load.php');
                 ?>
                 </ul>
             </div>
-            <div class="col-5 blk">
+            <div class="col-6 blk">
                 <h5>Members()</h5>
 
                 <ul>
