@@ -74,7 +74,8 @@ require('../wp-load.php');
         
         $post_id=$_GET['aid'];
         ?>
-        <h4 class="mt-4">Traffic of <?php echo get_the_title($post_id);?></h4>
+        <h4 class="mt-4">Traffic of <?php echo get_the_title($post_id);?> (<a
+                href="<?php echo get_permalink($post_id);?>">link</a>)</h4>
 
         <div>
             <?php
