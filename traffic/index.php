@@ -95,6 +95,35 @@ require('../wp-load.php');
             <div class="col-5 blk">
                 <h5>Members()</h5>
 
+
+                <?php
+                
+                $query_args = array(
+                    'posts_per_page' => '999999999',
+                    'post_type' => 'member',
+                    'order' => 'DESC',
+                    'orderby' => 'date',
+                );
+                
+                // The Query
+                $the_query = new WP_Query( $query_args );
+                
+                // The Loop
+                if ( $the_query->have_posts() ) {
+                    while ( $the_query->have_posts() ) {
+                        $the_query->the_post();
+                    }
+                    ?>
+                d
+                <?php
+                    /* Restore original Post Data */
+                    wp_reset_postdata();
+                } else {
+                    // no posts found
+                }
+                
+                ?>
+
             </div>
         </div>
     </div>
