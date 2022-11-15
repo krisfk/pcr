@@ -167,7 +167,7 @@ $result = mysqli_query($conn, $query);
     <script type="text/javascript">
     $(function() {
 
-        $('.visits-count').html($('.result-table tr').length);
+        $('.visits-count').html($('.result-table tr').length - 1);
 
 
 
