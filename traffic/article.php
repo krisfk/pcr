@@ -39,14 +39,14 @@
     $(function() {
         $('#i').dateRangePicker({
                 inline: true,
-                format: 'MM-DD-YYYY',
+                format: 'MM/DD/YYYY',
                 container: '#ccc',
                 alwaysOpen: false,
                 singleMonth: true,
                 showTopbar: false,
                 setValue: function(s) {
 
-                    $(this).val('12-01-2017');
+                    // $(this).val('12-01-2017');
                 }
             })
             .bind('datepicker-change', (e, data) => {
