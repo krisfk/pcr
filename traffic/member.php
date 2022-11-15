@@ -140,7 +140,7 @@ $result = mysqli_query($conn, $query);
      ?>
         <tr class="row justify-content-center">
 
-            <td class="col-2"><?php echo $row['user_id'] == 0 ? '無登入':get_field('account_name',$row['user_id']);?>
+            <td class="col-2"><?php echo get_the_title($row['post_id']);?>
             </td>
             <td class="col-3"><?php echo $row['user_id'] == 0 ? '-':get_field('email',$row['user_id']);?></td>
             <td class="col-2"><?php echo $row['datetime'];?></td>
