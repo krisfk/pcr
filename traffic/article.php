@@ -50,14 +50,14 @@
                 }
             })
             .bind('datepicker-change', (e, data) => {
-                $('#out').val(data.value);
-                console.log(data.date1.getFullYear() + '-' + Number(data.date1.getMonth() + 1) + '-' + data
-                    .date1
-                    .getDate());
 
-                console.log(data.date2.getFullYear() + '-' + Number(data.date2.getMonth() + 1) + '-' + data
-                    .date2
-                    .getDate());
+                var str = data.value;
+                var date_arr = str.split(" ");
+                var from_date = date_arr[0];
+                var to_date = date_arr[2];
+
+                window.location =
+                    '<?php echo get_site_url().'/traffic/article.php?aid='.$_GET['aid'].'&from_date='.$from_date.'&to_date='.$to_date;?>'
             })
     })
     </script>
