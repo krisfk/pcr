@@ -24,7 +24,7 @@
 
     <?php
 require('../wp-load.php');
-require('./db-config.php');
+require('../db-config.php');
 
 ?>
     <div class="text-center mt-4">
