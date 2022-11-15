@@ -105,12 +105,12 @@ require('../wp-load.php');
                 );
                 
                 // The Query
-                $the_query = new WP_Query( $query_args );
+                $the_query2 = new WP_Query( $query_args );
                 
                 // The Loop
-                if ( $the_query->have_posts() ) {
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post();
+                if ( $the_query2->have_posts() ) {
+                    while ( $the_query2->have_posts() ) {
+                        $the_query2->the_post();
                     }
                     echo get_the_title();
                     ?>
