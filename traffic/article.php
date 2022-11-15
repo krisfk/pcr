@@ -27,7 +27,7 @@ require('../wp-load.php');
 ?>
     <div class="text-center mt-4">
         <h1>PCR website traffic records</h1>
-        Today is <?php echo date("Y/m/d");?>
+        <!-- Today is <?php echo date("Y/m/d");?> -->
 
         <?php
         
@@ -40,7 +40,7 @@ require('../wp-load.php');
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                     value="option1" />
-                <label class="form-check-label" for="inlineRadio1">1</label>
+                <label class="form-check-label" for="inlineRadio1">Today Traffic (<?php echo date("Y/m/d");?>)</label>
             </div>
 
             <div class="form-check form-check-inline">
