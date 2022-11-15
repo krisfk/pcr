@@ -24,10 +24,19 @@
 
     <?php
 require('../wp-load.php');
-
 ?>
     <div class="text-center mt-4">
         <h1>PCR website traffic records</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <div class="col-5">fds</div>
+            <div class="col-5">fds</div>
+        </div>
     </div>
 </body>
 
