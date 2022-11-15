@@ -77,7 +77,11 @@ if ($conn->connect_error) {
 $aid=$_GET['aid'];
 
 // DATE(datetime) = '2009-10-20'
-$query = "SELECT * FROM traffic_record WHERE post_id = $aid AND DATE(datetime) >= '2022-11-16' AND  DATE(datetime) <= '2022-11-16'   ORDER BY datetime DESC";
+
+$from_date = $_GET['from_date'] ? $_GET['from_date'] : date("Y-m-d");
+$to_date = $_GET['to_date'] ? $_GET['to_date'] : date("Y-m-d");
+
+$query = "SELECT * FROM traffic_record WHERE post_id = $aid AND DATE(datetime) >= $from_date AND  DATE(datetime) <= $to_date   ORDER BY datetime DESC";
 
 $result = mysqli_query($conn, $query);
 
