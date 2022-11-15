@@ -57,5 +57,10 @@ a {
     text-decoration: underline;
 }
 
+th {
+    background: #000;
+    color: #fff;
+}
+
 
 /*  */
