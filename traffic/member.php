@@ -22,6 +22,9 @@
 
 <body>
 
+    <a href="https://perspectivecr.org/traffic/" class="home-a">
+        <img src="./home-btn.png" alt="">
+    </a>
     <?php
 require('../wp-load.php');
     ?>
