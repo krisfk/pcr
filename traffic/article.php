@@ -75,7 +75,11 @@ require('../wp-load.php');
         <h4 class="mt-4">Traffic of <?php echo get_the_title($post_id);?></h4>
 
         <div>
+            <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;' />
+            <span id='i' class="fa fa-calendar"></span>
+            <div id='ccc'></div>
 
+            <!-- 
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                     value="option1" />
@@ -92,7 +96,7 @@ require('../wp-load.php');
                     <div id='ccc'></div>
 
                 </label>
-            </div>
+            </div> -->
 
 
 
