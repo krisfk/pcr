@@ -85,6 +85,15 @@ require('../wp-load.php');
             <div class="col-5">Members()</div>
         </div>
     </div>
+
+    <script type="text/javascript">
+    $(function() {
+
+        $('.articles-col .num').html($('.articles-col ul li').length)
+
+
+    })
+    </script>
 </body>
 
 </html>
