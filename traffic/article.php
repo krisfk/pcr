@@ -39,7 +39,7 @@
     $(function() {
         $('#i').dateRangePicker({
                 inline: true,
-                format: 'MM/DD/YYYY',
+                format: 'DD/MM/YYYY',
                 container: '#ccc',
                 alwaysOpen: false,
                 singleMonth: true,
