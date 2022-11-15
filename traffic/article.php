@@ -51,9 +51,11 @@
             })
             .bind('datepicker-change', (e, data) => {
                 $('#out').val(data.value);
-                console.log(data.date1.getDate());
+                console.log(data.date1.getFullYear() + '-' + data.date1.getMonth() + '-' + data.date1
+                    .getDate());
 
-                console.log(data.date2.getDate());
+                console.log(data.date2.getFullYear() + '-' + data.date2.getMonth() + '-' + data.date2
+                    .getDate());
             })
     })
     </script>
