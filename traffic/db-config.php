@@ -15,15 +15,15 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM traffic_record";
 
-// if ($result = $mysqli -> query($sql)) {
-//   while ($row = $result -> fetch_row()) {
-//     echo 1;
-//     // printf ("%s (%s)\n", $row[0], $row[1]);
-//   }
-//   $result -> free_result();
-// }
+if ($result = $conn -> query($sql)) {
+  while ($row = $conn -> fetch_row()) {
+    echo 1;
+    // printf ("%s (%s)\n", $row[0], $row[1]);
+  }
+  $result -> free_result();
+}
 
-// $mysqli -> close();
+$mysqli -> close();
 
 
 ?>
