@@ -61,7 +61,7 @@
 <body>
 
     <?php
-// require('../wp-load.php');
+require('../wp-load.php');
 require('./db-config.php');
 
 
@@ -72,7 +72,6 @@ $result = mysqli_query($conn, $query);
 
     while($row = mysqli_fetch_assoc($result))
     {
-        echo 1;
     }
 
 
