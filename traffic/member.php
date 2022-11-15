@@ -112,8 +112,8 @@ $result = mysqli_query($conn, $query);
         
         $post_id=$_GET['aid'];
         ?>
-        <h4 class="mt-4">Traffic History of <?php echo get_field('account_name',$_GET['mid']);?> (<a target="_blank"
-                href="<?php echo get_permalink($post_id);?>">link</a>)</h4>
+        <h4 class="mt-4">Traffic History of <?php echo get_field('account_name',$_GET['mid']);?>
+            (<?php echo get_field('email',$_GET['mid']);?>)</h4>
 
         <div>
 
