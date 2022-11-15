@@ -42,8 +42,9 @@ require('../wp-load.php');
                 ?>
 
                 </h3>
+                <ul>
 
-                <?php
+                    <?php
 
                 $query_args = array(
                     'post_type' => 'post',
@@ -55,27 +56,31 @@ require('../wp-load.php');
                 $the_query = new WP_Query( $query_args );
                 
                 // The Loop
+                
                 if ( $the_query->have_posts() ) {
                     while ( $the_query->have_posts() ) {
                         $the_query->the_post();
                         ?>
-                <ul>
+
                     <li>
                         <a href="#"><?php
                         echo get_the_title();
                         ?></a>
                     </li>
-                </ul>
-                <?php
+
+                    <?php
                     }
                     /* Restore original Post Data */
                     wp_reset_postdata();
                 } else {
                     // no posts found
                 }
+
+
                 
                 
                 ?>
+                </ul>
             </div>
             <div class="col-5">Members()</div>
         </div>
