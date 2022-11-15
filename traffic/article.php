@@ -62,7 +62,7 @@
 
     <?php
 require('../wp-load.php');
-require('./db-config.php');
+// require('./db-config.php');
 
 require(get_site_url().'/traffic/db-config.php');
 $query = "SELECT * FROM traffic_record";
