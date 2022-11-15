@@ -130,22 +130,29 @@ get_header();
                             $expiry_date = get_field('paid_membership_expiry_date',$_SESSION['user_id']);
 
                             if ($expiry_date < $today) {
-                                $show_article=true;
-                            }
-                            else
-                            {
+                                
                                 $show_article=false;
                                 ?>
 
         <div class="inner-container">
             <div class="mb-5 text-center">
                 <?php                     
-                echo '收費會員資格已過期，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
-                ?>
+                                echo '收費會員資格已過期，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
+                                ?>
             </div>
         </div>
 
         <?php
+
+                            }
+                            else
+                            {
+                           
+                                
+                                //check paid member
+                                $show_article=true;
+                           
+                                
 
                             }
 
