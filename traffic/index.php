@@ -34,14 +34,14 @@ require('../wp-load.php');
         <div class="row justify-content-center">
 
 
-            <div class="col-5">
-                <h3>Articles()
+            <div class="col-5 articles-col">
+                <h5>Articles(<span class="num"></span>)
 
                     <?php
                 
                 ?>
 
-                </h3>
+                </h5>
                 <ul>
 
                     <?php
