@@ -124,14 +124,14 @@ get_header();
                         
                         if(get_field('paid_membership',$_SESSION['user_id']))
                         {
-                            echo 'check expire';
-                            echo get_field('paid_membership_expiry_date',$_SESSION['user_id']);
+                            // echo 'check expire';
+                            // echo get_field('paid_membership_expiry_date',$_SESSION['user_id']);
                                
 
                             // $today = new DateTime("today"); 
                             
                             $today = date("d/m/Y");
-                            $expiry_date = "10/10/2022";
+                            $expiry_date = "20/11/2022";
 
                             if ($expiry_date < $today) {
                                     echo 1;
