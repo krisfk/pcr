@@ -269,7 +269,7 @@ else
 $sql = "INSERT INTO traffic_record (post_id, user_id , datetime,IP) VALUES (".get_the_ID().",".$_SESSION['user_id'].",NOW(),'$ip')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+//   echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
