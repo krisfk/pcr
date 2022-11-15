@@ -131,7 +131,7 @@ get_header();
                             // $today = new DateTime("today"); 
                             
                             $today = date("d/m/Y");
-                            $expiry_date = "20/11/2022";
+                            $expiry_date = get_field('paid_membership_expiry_date',$_SESSION['user_id']);
 
                             if ($expiry_date < $today) {
                                     echo 1;
