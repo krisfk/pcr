@@ -89,14 +89,14 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$aid=$_GET['aid'];
+$mid=$_GET['mid'];
 
 // DATE(datetime) = '2009-10-20'
 
 $from_date = $_GET['from_date'] ? $_GET['from_date'] : date("Y-m-d");
 $to_date = $_GET['to_date'] ? $_GET['to_date'] : date("Y-m-d");
 
-$query = "SELECT * FROM traffic_record WHERE post_id = $aid AND DATE(datetime) >= '$from_date' AND  DATE(datetime) <= '$to_date'   ORDER BY datetime DESC";
+$query = "SELECT * FROM traffic_record WHERE user_id = $mid AND DATE(datetime) >= '$from_date' AND  DATE(datetime) <= '$to_date'   ORDER BY datetime DESC";
 
 $result = mysqli_query($conn, $query);
 
