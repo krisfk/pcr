@@ -71,6 +71,9 @@
 </head>
 
 <body>
+    <a href="https://perspectivecr.org/traffic/" class="home-a">
+        <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/home_circle_icon_137496.png" alt="">
+    </a>
 
     <?php
 require('../wp-load.php');
