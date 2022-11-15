@@ -17,12 +17,12 @@ if ($conn->connect_error) {
 
 $query = mysqli_query("SELECT * FROM traffic_record");
 
-while(($row = mysql_fetch_assoc($query)) != NULL) {
+// while(($row = mysql_fetch_assoc($query)) != NULL) {
 
-    echo 1;
-    // echo "<p>User {$row['username']} just registered {$minutes} min ago</p><br />";
+//     echo 1;
+//     // echo "<p>User {$row['username']} just registered {$minutes} min ago</p><br />";
 
-}
+// }
 
 // $sql = "SELECT * FROM traffic_record";
 
