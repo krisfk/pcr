@@ -98,14 +98,14 @@ require('../wp-load.php');
 
                 <?php
                 
-                $query_args = array(
+                $query_args2 = array(
                     'post_type' => 'post',
                     'posts_per_page' => '-1',
                     'ignore_custom_sort' => true
                 );
                 
                 // The Query
-                $the_query2 = new WP_Query( $query_args );
+                $the_query2 = new WP_Query( $query_args2 );
                 
                 // The Loop
                 if ( $the_query2->have_posts() ) {
