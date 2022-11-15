@@ -27,6 +27,7 @@ require('../wp-load.php');
 ?>
     <div class="text-center mt-4">
         <h1>PCR website traffic records</h1>
+        today is <?php echo date("Y/m/d");?>
     </div>
 
     <div class="container mt-4">
