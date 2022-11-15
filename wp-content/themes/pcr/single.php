@@ -228,7 +228,7 @@ get_header();
 if($show_article)
 {
 
-    require(get_site_url().'/traffic/db-config.php');
+    require('https://perspectivecr.org/traffic/db-config.php');
 
     
 //     $servername = "localhost";
