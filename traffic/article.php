@@ -114,10 +114,10 @@ $result = mysqli_query($conn, $query);
     {
      ?>
 
-            <div class="col-4"><?php echo $row['user_id'];?></div>
-            <div class="col-4">user_email</div>
-            <div class="col-4">datetime</div>
-            <div class="col-4">IP</div>
+            <div class="col-3"><?php echo $row['user_id'];?></div>
+            <div class="col-3">user_email</div>
+            <div class="col-3">datetime</div>
+            <div class="col-3">IP</div>
 
             <?php   
     }
