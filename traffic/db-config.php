@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 
 $result = $conn->mysqli_query("SELECT * FROM traffic_record");
 
-$row = $result->fetch_assoc();
+// $row = $result->fetch_assoc();
 
 
 // while(($row = mysql_fetch_assoc($query)) != NULL) {
