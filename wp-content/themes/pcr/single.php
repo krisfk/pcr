@@ -169,7 +169,15 @@ get_header();
 
                                }
 
-                               echo $found;
+                               if($found)
+                               {
+                                echo'found';
+                               }
+                               else
+                               {
+                                echo 'no';
+                               }
+                            //    echo $found;
                                
                                 // print_r($open_to_paid_membership_codes_arr);
                                 // echo $open_to_paid_membership_codes_arr[0]['paid_membership_code'];
