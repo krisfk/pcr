@@ -67,8 +67,8 @@ require('../wp-load.php');
 
                         <div class="row">
 
-                            <div class="col-6"> <a href="#"><?php
-                        echo get_the_title();
+                            <div class="col-6"> <a href="<?php echo 'article.php?aid='.get_the_ID();?>"><?php
+                              echo get_the_title();
                         ?></a></div>
                             <div class="col-6">
                                 <?php
