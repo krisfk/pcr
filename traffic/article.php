@@ -62,18 +62,11 @@
 
     <?php
 require('../wp-load.php');
-// require('./db-config.php');
-
-// require('../db-config.php');
-
 $servername = TRAFFIC_SERVER_NAME;
-    $username = TRAFFIC_USER_NAME;
-    $password = TRAFFIC_PASSWORD;
-    $dbname = TRAFFIC_DBNAME;
-
-// Create connection
+$username = TRAFFIC_USER_NAME;
+$password = TRAFFIC_PASSWORD;
+$dbname = TRAFFIC_DBNAME;
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
@@ -86,6 +79,7 @@ $result = mysqli_query($conn, $query);
 
     while($row = mysqli_fetch_assoc($result))
     {
+        echo 1;
     }
 
 
