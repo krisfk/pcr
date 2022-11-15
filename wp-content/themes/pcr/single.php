@@ -140,7 +140,7 @@ get_header();
         <div class="inner-container">
             <div class="mb-5 text-center">
                 <?php                     
-                echo '收費會員資格已過期，如有任何問題請<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>';
+                echo '收費會員資格已過期，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>';
                 ?>
             </div>
         </div>
