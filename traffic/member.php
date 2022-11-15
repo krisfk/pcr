@@ -142,7 +142,7 @@ $result = mysqli_query($conn, $query);
 
             <td class="col-2"><?php echo get_the_title($row['post_id']);?>
             </td>
-            <td class="col-3"><?php echo $row['user_id'] == 0 ? '-':get_field('email',$row['user_id']);?></td>
+            <td class="col-3"><a target="_blank" href="<?php echo get_permalink($row['post_id']);?>">link</a></td>
             <td class="col-2"><?php echo $row['datetime'];?></td>
             <td class="col-2"><?php echo $row['IP'];?></td>
 
