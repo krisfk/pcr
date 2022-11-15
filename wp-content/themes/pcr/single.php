@@ -158,8 +158,10 @@ get_header();
                                 $open_to_paid_membership_codes_arr = get_field('open_to_paid_membership_codes');
                                
                                 $found =false;
+
                                for($i=0;$i<$open_to_paid_membership_codes_arr.length;$i++)
                                {
+                                echo $i;
                                 if($open_to_paid_membership_codes_arr[$i]['paid_membership_code']=='ABCDE')
                                 {
                                     $found=true;
