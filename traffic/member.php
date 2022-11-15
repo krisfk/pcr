@@ -128,7 +128,7 @@ $result = mysqli_query($conn, $query);
 
         <div class="mt-4">
             <h4>
-                Total Visits in the date range: <span class="visits-count"></span></h4>
+                Total Visit History: <span class="visits-count"></span></h4>
         </div>
     </div>
 
