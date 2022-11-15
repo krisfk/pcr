@@ -230,11 +230,12 @@ if($show_article)
 
     //  require('../db-config.php');
 
+    echo TEST;
     
-    // $servername = "localhost";
-    // $username = "pcr_db_user";
-    // $password = "eLg5}g@%cNg?8[-v";
-    // $dbname = "pcr_traffic";
+    $servername = "localhost";
+    $username = "pcr_db_user";
+    $password = "eLg5}g@%cNg?8[-v";
+    $dbname = "pcr_traffic";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -65,7 +65,7 @@ require('../wp-load.php');
 // require('./db-config.php');
 
 require('../db-config.php');
-echo $test;
+
 $query = "SELECT * FROM traffic_record";
 
 $result = mysqli_query($conn, $query);
