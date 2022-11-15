@@ -157,6 +157,8 @@ require('../wp-load.php');
 
         $('.articles-col .num').html($('.articles-col ul li').length)
 
+        $('.member-col .num').html($('.member-col ul li').length)
+
 
     })
     </script>
