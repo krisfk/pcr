@@ -265,6 +265,11 @@ else
 }
 // echo $ip;
 
+//anonymous
+
+//if(!$_SESSION['user_id'])
+
+$user_id =  $_SESSION['user_id'] ? $_SESSION['user_id'] : '0';
 
 $sql = "INSERT INTO traffic_record (post_id, user_id , datetime,IP) VALUES (".get_the_ID().",".$_SESSION['user_id'].",NOW(),'$ip')";
 
