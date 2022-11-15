@@ -99,10 +99,9 @@ require('../wp-load.php');
                 <?php
                 
                 $query_args = array(
-                    'posts_per_page' => '999999999',
-                    'post_type' => 'member',
-                    'order' => 'DESC',
-                    'orderby' => 'date',
+                    'post_type' => 'post',
+                    'posts_per_page' => '-1',
+                    'ignore_custom_sort' => true
                 );
                 
                 // The Query
