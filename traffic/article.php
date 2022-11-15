@@ -39,7 +39,7 @@
     $(function() {
         $('#i').dateRangePicker({
                 inline: true,
-                format: 'DD/MM/YYYY',
+                format: 'YYYY/MM/DD',
                 container: '#ccc',
                 alwaysOpen: false,
                 singleMonth: true,
@@ -82,7 +82,7 @@ require('../wp-load.php');
 
             ?>
             <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;'
-                value="<?php echo date("d/m/Y");?> - <?php echo date("d/m/Y");?>" />
+                value="<?php echo date("Y/m/d");?> - <?php echo date("Y/m/d");?>" />
             <span id='i' class="fa fa-calendar"></span>
             <div id='ccc'></div>
 
