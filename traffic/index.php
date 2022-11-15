@@ -70,10 +70,14 @@ require('../wp-load.php');
                             <div class="col-6"> <a href="<?php echo 'article.php?aid='.get_the_ID();?>"><?php
                               echo get_the_title();
                         ?></a></div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <?php
                                 echo get_the_date();
                                 ?>
+                            </div>
+                            <div class="col-2">
+                                <a href="<?php echo get_permalink();?>">link</a>
+
                             </div>
                         </div>
 
