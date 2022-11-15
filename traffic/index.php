@@ -120,7 +120,11 @@ require('../wp-load.php');
                         <div class="row">
 
                             <div class="col-4">
-                                <?php echo get_field('account_name');?>
+                                <a href="?member_id=<?php echo get_the_ID();?>">
+                                    <?php 
+                                
+                                
+                                echo get_field('account_name');?></a>
                             </div>
                             <div class="col-8">
                                 <?php echo get_field('email');?>
