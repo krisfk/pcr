@@ -29,7 +29,7 @@ require('../wp-load.php');
         <h1>PCR website traffic records</h1>
     </div>
 
-    <div class="container">
+    <div class="container mt-4">
 
         <div class="row justify-content-center  gx-3">
 
