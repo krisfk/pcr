@@ -77,17 +77,28 @@ $query = "SELECT * FROM traffic_record WHERE post_id = $aid ";
 $result = mysqli_query($conn, $query);
 
 
+?>
+    <div class="container">
+
+        <div class="row">
+            <?php
     while($row = mysqli_fetch_assoc($result))
     {
      ?>
 
-    <?php   
+            <div class="col-4"><?php echo $row['user_id'];?></div>
+            <div class="col-4">user_email</div>
+            <div class="col-4">datetime</div>
+            <div class="col-4">IP</div>
+
+            <?php   
     }
 
 
 
 ?>
-
+        </div>
+    </div>
 
 
     <div class="text-center mt-4">
