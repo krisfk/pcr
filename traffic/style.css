@@ -16,3 +16,7 @@ ul li a {
 h5 {
     font-weight: bold;
 }
+
+.blk {
+    border: 1px solid #e5e5e5;
+}

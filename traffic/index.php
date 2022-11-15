@@ -34,7 +34,7 @@ require('../wp-load.php');
         <div class="row justify-content-center">
 
 
-            <div class="col-5 articles-col">
+            <div class="col-5 articles-col blk">
                 <h5>Articles(<span class="num"></span>)
 
                     <?php
@@ -50,11 +50,6 @@ require('../wp-load.php');
                     'post_type' => 'post',
                     'posts_per_page' => '-1',
                     'ignore_custom_sort' => true
-                    // 'order' => 'ASC',
-                	// 'orderby' => 'post_date',
-                    // 'suppress_filters' => true
-
-                    
                 );
                 // 
                 // The Query
@@ -97,7 +92,7 @@ require('../wp-load.php');
                 ?>
                 </ul>
             </div>
-            <div class="col-5">Members()</div>
+            <div class="col-5 blk">Members()</div>
         </div>
     </div>
 
