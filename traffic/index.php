@@ -50,7 +50,7 @@ require('../wp-load.php');
                     'post_type' => 'post',
                     'posts_per_page' => '-1',
                     'order' => 'DESC',
-                	'orderby' => 'date',
+                	'orderby' => 'post_date',
                     'suppress_filters' => true
 
                     
