@@ -114,10 +114,11 @@ $result = mysqli_query($conn, $query);
     {
      ?>
 
-            <div class="col-3"><?php echo $row['user_id'];?></div>
-            <div class="col-3">user_email</div>
-            <div class="col-3">datetime</div>
-            <div class="col-3">IP</div>
+            <div class="col-3"><?php echo $row['user_id'] == 0 ? '無登入':get_field('account_name',$row['user_id']);?>
+            </div>
+            <div class="col-3"><?php echo $row['user_id'] == 0 ? '-':get_field('email',$row['user_id']);?></div>
+            <div class="col-3"><?php echo $row['datetime'];?></div>
+            <div class="col-3"><?php echo $row['IP'];?></div>
 
             <?php   
     }
