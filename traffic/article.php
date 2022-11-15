@@ -138,7 +138,7 @@ $result = mysqli_query($conn, $query);
         <table class="container mt-4 result-table">
 
             <tr class="row justify-content-center">
-                <th class="col-2">Username</th>
+                <th class="col-2">User Name</th>
                 <th class="col-3">User Email</th>
                 <th class="col-2">Visit Date and Time</th>
                 <th class="col-2">From IP</th>
