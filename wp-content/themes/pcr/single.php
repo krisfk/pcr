@@ -245,6 +245,8 @@ if ($conn->connect_error) {
 // Datetime
 // IP
 // echo 'test';
+date_default_timezone_set('Asia/Hong_Kong');
+
 $sql = "INSERT INTO traffic_record (post_id, user_id , datetime,IP) VALUES ('11', '11', NOW(),'999')";
 
 if ($conn->query($sql) === TRUE) {
