@@ -98,23 +98,26 @@ require('../wp-load.php');
 
                 <?php
                 
-                $query_args2 = array(
-                    'post_type' => 'post',
+                $query_args = array(
                     'posts_per_page' => '-1',
-                    'ignore_custom_sort' => true
+                    'post_type' => 'member',
+                    'order' => 'DESC',
+                    'orderby' => 'date',
                 );
                 
                 // The Query
-                $the_query2 = new WP_Query( $query_args2 );
+                $the_query = new WP_Query( $query_args );
                 
                 // The Loop
-                if ( $the_query2->have_posts() ) {
-                    while ( $the_query2->have_posts() ) {
-                        $the_query2->the_post();
-                    }
-                    echo get_the_title();
-                    ?>
+                if ( $the_query->have_posts() ) {
+                    while ( $the_query->have_posts() ) {
+                        $the_query->the_post();
+                        ?>
                 1
+                <?php
+                    }
+                    ?>
+
                 <?php
                     /* Restore original Post Data */
                     wp_reset_postdata();
