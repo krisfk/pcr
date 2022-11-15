@@ -132,39 +132,43 @@ $result = mysqli_query($conn, $query);
         </div>
     </div>
 
-    <table class="container mt-4 result-table">
+    <div class="result-table-div">
 
-        <?php
+
+        <table class="container mt-4 result-table">
+
+            <?php
     while($row = mysqli_fetch_assoc($result))
     {
      ?>
-        <tr class="row justify-content-center">
+            <tr class="row justify-content-center">
 
-            <td class="col-2"><?php echo $row['user_id'] == 0 ? '無登入':get_field('account_name',$row['user_id']);?>
-            </td>
-            <td class="col-3"><?php echo $row['user_id'] == 0 ? '-':get_field('email',$row['user_id']);?></td>
-            <td class="col-2"><?php echo $row['datetime'];?></td>
-            <td class="col-2"><?php echo $row['IP'];?></td>
+                <td class="col-2"><?php echo $row['user_id'] == 0 ? '無登入':get_field('account_name',$row['user_id']);?>
+                </td>
+                <td class="col-3"><?php echo $row['user_id'] == 0 ? '-':get_field('email',$row['user_id']);?></td>
+                <td class="col-2"><?php echo $row['datetime'];?></td>
+                <td class="col-2"><?php echo $row['IP'];?></td>
 
-        </tr>
-        <?php   
+            </tr>
+            <?php   
     }
 
 
 
 ?>
-        </tb>
+        </table>
+    </div>
 
 
-        <script type="text/javascript">
-        $(function() {
+    <script type="text/javascript">
+    $(function() {
 
-            $('.visits-count').html($('.result-table tr').length);
+        $('.visits-count').html($('.result-table tr').length);
 
 
 
-        })
-        </script>
+    })
+    </script>
 </body>
 
 </html>

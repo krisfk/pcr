@@ -132,39 +132,41 @@ $result = mysqli_query($conn, $query);
         </div>
     </div>
 
-    <table class="container mt-4 result-table">
+    <div class="result-table-div">
+        <table class="container mt-4 result-table">
 
-        <?php
+            <?php
     while($row = mysqli_fetch_assoc($result))
     {
      ?>
-        <tr class="row justify-content-center">
+            <tr class="row justify-content-center">
 
-            <td class="col-2"><?php echo get_the_title($row['post_id']);?>
-            </td>
-            <td class="col-3"><a target="_blank" href="<?php echo get_permalink($row['post_id']);?>">link</a></td>
-            <td class="col-2"><?php echo $row['datetime'];?></td>
-            <td class="col-2"><?php echo $row['IP'];?></td>
+                <td class="col-2"><?php echo get_the_title($row['post_id']);?>
+                </td>
+                <td class="col-3"><a target="_blank" href="<?php echo get_permalink($row['post_id']);?>">link</a></td>
+                <td class="col-2"><?php echo $row['datetime'];?></td>
+                <td class="col-2"><?php echo $row['IP'];?></td>
 
-        </tr>
-        <?php   
+            </tr>
+            <?php   
     }
 
 
 
 ?>
-        </tb>
+        </table>
+    </div>
 
 
-        <script type="text/javascript">
-        $(function() {
+    <script type="text/javascript">
+    $(function() {
 
-            $('.visits-count').html($('.result-table tr').length);
+        $('.visits-count').html($('.result-table tr').length);
 
 
 
-        })
-        </script>
+    })
+    </script>
 </body>
 
 </html>
