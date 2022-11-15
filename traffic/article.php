@@ -72,7 +72,7 @@ if ($conn->connect_error) {
 }
 
 $aid=$_GET['aid'];
-$query = "SELECT * FROM traffic_record WHERE post_id = $aid AND datetime >= '2022-11-16' AND datetime <= '2022-11-17' ORDER BY datetime DESC";
+$query = "SELECT * FROM traffic_record WHERE post_id = $aid AND datetime >= '2022-11-16' AND datetime <= '2022-11-16' ORDER BY datetime DESC";
 
 $result = mysqli_query($conn, $query);
 
