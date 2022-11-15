@@ -75,6 +75,10 @@ require('../wp-load.php');
         <h4 class="mt-4">Traffic of <?php echo get_the_title($post_id);?></h4>
 
         <div>
+            <?php
+            date_default_timezone_set('Asia/Hong_Kong');
+
+            ?>
             <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;'
                 value="<?php echo date("Y/m/d");?> - <?php echo date("Y/m/d");?>" />
             <span id='i' class="fa fa-calendar"></span>
