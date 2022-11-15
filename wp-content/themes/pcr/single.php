@@ -240,15 +240,18 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-echo 'test';
-// $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-// VALUES ('John', 'Doe', 'john@example.com')";
+// post_id
+// user_id
+// Datetime
+// IP
+// echo 'test';
+$sql = "INSERT INTO traffic_record (post_id, user_id , datetime,IP) VALUES ('11', '11', NOW(),'999')";
 
-// if ($conn->query($sql) === TRUE) {
-//   echo "New record created successfully";
-// } else {
-//   echo "Error: " . $sql . "<br>" . $conn->error;
-// }
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
 $conn->close();
 
