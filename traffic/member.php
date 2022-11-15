@@ -15,161 +15,156 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.14.2/jquery.daterangepicker.min.js">
+    </script>
+
     <link href="style.css" rel="stylesheet">
 
 
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.14.2/daterangepicker.min.css">
+
+
+    <?php
+        
+        $from_date = $_GET['from_date'] ? $_GET['from_date'] : date("Y-m-d");
+        $to_date = $_GET['to_date'] ? $_GET['to_date'] : date("Y-m-d");
+    
+        ?>
+    <script type="text/javascript">
+    $(function() {
+        $('#i').dateRangePicker({
+                inline: true,
+                format: 'YYYY-MM-DD',
+                container: '#ccc',
+                alwaysOpen: false,
+                singleMonth: true,
+                showTopbar: false,
+                setValue: function(s) {
+
+                    $(this).val('<?php echo $from_date.' to '.$to_date;?>');
+                }
+            })
+            .bind('datepicker-change', (e, data) => {
+
+                var str = data.value;
+                var date_arr = str.split(" ");
+                var from_date = date_arr[0];
+                var to_date = date_arr[2];
+
+                window.location =
+                    'https://perspectivecr.org/traffic/article.php?aid=<?php echo $_GET['aid'];?>' +
+                    '&from_date=' + from_date + '&to_date=' + to_date;
+            })
+    })
+    </script>
 </head>
 
 <body>
-
     <a href="https://perspectivecr.org/traffic/" class="home-a">
         <img src="./home-btn.png" alt="">
     </a>
+
     <?php
 require('../wp-load.php');
-    ?>
+date_default_timezone_set('Asia/Hong_Kong');
+
+
+$servername = TRAFFIC_SERVER_NAME;
+$username = TRAFFIC_USER_NAME;
+$password = TRAFFIC_PASSWORD;
+$dbname = TRAFFIC_DBNAME;
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$aid=$_GET['aid'];
+
+// DATE(datetime) = '2009-10-20'
+
+$from_date = $_GET['from_date'] ? $_GET['from_date'] : date("Y-m-d");
+$to_date = $_GET['to_date'] ? $_GET['to_date'] : date("Y-m-d");
+
+$query = "SELECT * FROM traffic_record WHERE post_id = $aid AND DATE(datetime) >= '$from_date' AND  DATE(datetime) <= '$to_date'   ORDER BY datetime DESC";
+
+$result = mysqli_query($conn, $query);
+
+
+?>
+
+
     <div class="text-center mt-4">
         <h1>PCR website traffic records</h1>
-        Today is <?php echo date("Y/m/d");?>
-    </div>
+        <!-- Today is <?php echo date("Y/m/d");?> -->
 
-    <div class="container mt-4">
+        <?php
+        
+        $post_id=$_GET['aid'];
+        ?>
+        <h4 class="mt-4">Traffic History of <?php echo get_field('account_name',$_GET['mid']);?> (<a target="_blank"
+                href="<?php echo get_permalink($post_id);?>">link</a>)</h4>
 
-        <div class="row justify-content-center  gx-3">
+        <div>
 
-
-            <div class="col-5 articles-col blk">
-                <h5>Articles(<span class="num"></span>)
-
-                    <?php
-                
-                ?>
-
-                </h5>
-                <ul>
-
-                    <?php
-
-                $query_args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => '-1',
-                    'ignore_custom_sort' => true
-                );
-                // 
-                // The Query
-                $the_query = new WP_Query( $query_args );
-                
-                // The Loop
-                
-                if ( $the_query->have_posts() ) {
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post();
-                        ?>
-
-                    <li>
-
-                        <div class="row">
-
-                            <div class="col-6"> <a href="<?php echo 'article.php?aid='.get_the_ID();?>"><?php
-                              echo get_the_title();
-                        ?></a></div>
-                            <div class="col-4">
-                                <?php
-                                echo get_the_date();
-                                ?>
-                            </div>
-                            <div class="col-2">
-                                <a target="_blank" href="<?php echo get_permalink();?>">link</a>
-
-                            </div>
-                        </div>
-
-                    </li>
-
-                    <?php
-                    }
-                    /* Restore original Post Data */
-                    wp_reset_postdata();
-                } else {
-                    // no posts found
-                }
+            <input id='out' placeholder="yy-mm-dd to yy-mm-dd" style='font-size: 14pt; width: 20em;'
+                value="<?php echo $from_date;?> to <?php echo $to_date;?>" />
+            <span id='i' class="fa fa-calendar"></span>
+            <div id='ccc'></div>
 
 
-                
-                
-                ?>
-                </ul>
-            </div>
-            <div class="col-5 blk member-col">
-                <h5>Members(<span class="num"></span>)</h5>
 
-                <ul>
-                    <?php
-                
-                $query_args = array(
-                    'posts_per_page' => '-1',
-                    'post_type' => 'member',
-                    'order' => 'DESC',
-                    'orderby' => 'date',
-                );
-                
-                // The Query
-                $the_query = new WP_Query( $query_args );
-                
-                // The Loop
-                
-                if ( $the_query->have_posts() ) {
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post();
-                        ?>
+        </div>
 
-
-                    <li>
-                        <div class="row">
-
-                            <div class="col-4">
-                                <a href="./member.php?mid=<?php echo get_the_ID();?>">
-                                    <?php 
-                                
-                                
-                                echo get_field('account_name');?></a>
-                            </div>
-                            <div class="col-8">
-                                <a href="./member.php?mid=<?php echo get_the_ID();?>">
-
-                                    <?php echo get_field('email');?>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <?php
-                    }
-                    ?>
-
-                    <?php
-                    /* Restore original Post Data */
-                    wp_reset_postdata();
-                } else {
-                    // no posts found
-                }
-                
-                ?>
-                </ul>
-            </div>
+        <div class="mt-4">
+            <h4>
+                Total Visits in the date range: <span class="visits-count"></span></h4>
         </div>
     </div>
 
-    <script type="text/javascript">
-    $(function() {
+    <table class="container mt-4 result-table">
 
-        $('.articles-col .num').html($('.articles-col ul li').length)
+        <?php
+    while($row = mysqli_fetch_assoc($result))
+    {
+     ?>
+        <tr class="row justify-content-center">
 
-        $('.member-col .num').html($('.member-col ul li').length)
+            <td class="col-2"><?php echo $row['user_id'] == 0 ? '無登入':get_field('account_name',$row['user_id']);?>
+            </td>
+            <td class="col-3"><?php echo $row['user_id'] == 0 ? '-':get_field('email',$row['user_id']);?></td>
+            <td class="col-2"><?php echo $row['datetime'];?></td>
+            <td class="col-2"><?php echo $row['IP'];?></td>
+
+        </tr>
+        <?php   
+    }
 
 
-    })
-    </script>
+
+?>
+        </tb>
+
+
+        <script type="text/javascript">
+        $(function() {
+
+            $('.visits-count').html($('.result-table tr').length);
+
+
+
+        })
+        </script>
 </body>
 
 </html>
