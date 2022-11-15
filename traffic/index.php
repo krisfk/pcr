@@ -115,7 +115,7 @@ require('../wp-load.php');
                     }
                     echo get_the_title();
                     ?>
-
+                1
                 <?php
                     /* Restore original Post Data */
                     wp_reset_postdata();
