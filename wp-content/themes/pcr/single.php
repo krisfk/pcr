@@ -156,7 +156,20 @@ get_header();
                                 // $article_open_to_paid_membership_codes=get_field)
                                 
                                 $open_to_paid_membership_codes_arr = get_field('open_to_paid_membership_codes');
-                                print_r($open_to_paid_membership_codes_arr);
+                               
+                                $found =false;
+                               for($i=0;$i<$open_to_paid_membership_codes_arr.length;$i++)
+                               {
+                                if($open_to_paid_membership_codes_arr[$i]['paid_membership_code']=='ABCDE')
+                                {
+                                    $found=true;
+                                }
+
+                               }
+
+                               echo $found;
+                               
+                                // print_r($open_to_paid_membership_codes_arr);
                                 // echo $open_to_paid_membership_codes_arr[0]['paid_membership_code'];
 
                                 // echo array_search('ABCDE',$open_to_paid_membership_codes_arr,true);
