@@ -120,7 +120,7 @@ require('../wp-load.php');
                         <div class="row">
 
                             <div class="col-4">
-                                <a href="?member_id=<?php echo get_the_ID();?>">
+                                <a href="./member.php?mid=<?php echo get_the_ID();?>">
                                     <?php 
                                 
                                 
