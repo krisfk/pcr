@@ -82,7 +82,7 @@ require('../wp-load.php');
 
             ?>
             <input id='out' placeholder="yy-mm-dd to yy-mm-dd" style='font-size: 14pt; width: 20em;'
-                value="<?php echo date("Y-m-d");?> - <?php echo date("Y-m-d");?>" />
+                value="<?php echo date("Y-m-d");?> 至 <?php echo date("Y-m-d");?>" />
             <span id='i' class="fa fa-calendar"></span>
             <div id='ccc'></div>
 
