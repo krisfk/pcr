@@ -34,8 +34,42 @@ require('../wp-load.php');
         <div class="row justify-content-center">
 
 
-            <div class="col-5">fds</div>
-            <div class="col-5">fds</div>
+            <div class="col-5">
+                <h3>Articles()
+
+                    <?php
+                
+                ?>
+
+                </h3>
+
+                <?php
+
+                $query_args = array(
+                    'post_type' => 'post',
+                );
+                
+                // The Query
+                $the_query = new WP_Query( $query_args );
+                
+                // The Loop
+                if ( $the_query->have_posts() ) {
+                    while ( $the_query->have_posts() ) {
+                        $the_query->the_post();
+                        ?>
+                1
+                <?php
+                    }
+                    /* Restore original Post Data */
+                    wp_reset_postdata();
+                } else {
+                    // no posts found
+                }
+                
+                
+                ?>
+            </div>
+            <div class="col-5">Members()</div>
         </div>
     </div>
 </body>
