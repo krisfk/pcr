@@ -13,20 +13,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT * FROM traffic_record";
-
-$result = mysqli_query($conn, $query);
-
-
-    while($row = mysqli_fetch_assoc($result))
-    {
-        echo 1;
-        // $cat_id = $row['cat_id'];
-        // $cat_title = $row['cat_title'];
-
-        // echo $cat_id . " " . $cat_title  ."<br>";
-    }
-
 
 
 //$conn = db_connect();
