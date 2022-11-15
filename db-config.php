@@ -15,6 +15,12 @@ if ($conn->connect_error) {
 
 
 
+global $test;
+$test = 99999;
+
+
+
+
 //$conn = db_connect();
 
 // $result = $conn->mysqli_query("SELECT * FROM traffic_record");
