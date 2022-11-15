@@ -162,21 +162,29 @@ get_header();
                                for($i=0;$i<count($open_to_paid_membership_codes_arr);$i++)
                                {
                                 // echo $i;
-                                if($open_to_paid_membership_codes_arr[$i]['paid_membership_code']=='ABCDE')
+                                if($open_to_paid_membership_codes_arr[$i]['paid_membership_code']==$paid_member_code)
                                 {
                                     $found=true;
                                 }
 
                                }
 
-                               if($found)
+                               if(!$found)
                                {
-                                echo'found';
+                                $show_article=false;
+                                ?>
+        <div class="inner-container">
+            <div class="mb-5 text-center">
+                <?php                     
+                    echo '本帳號沒有閱讀本文章<b>('.get_the_title().')</b>的權限，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
+                    ?>
+            </div>
+        </div>
+        <?php
+                                        // echo'found';
                                }
-                               else
-                               {
-                                echo 'no';
-                               }
+
+                               
                             //    echo $found;
                                
                                 // print_r($open_to_paid_membership_codes_arr);
