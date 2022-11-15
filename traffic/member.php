@@ -135,6 +135,12 @@ $result = mysqli_query($conn, $query);
     <div class="result-table-div">
         <table class="container mt-4 result-table">
 
+            <tr>
+                <th class="col-2">Article title</th>
+                <th class="col-3">Article link</th>
+                <th class="col-2">Visit Date and Time</th>
+                <th class="col-2">From IP</th>
+            </tr>
             <?php
     while($row = mysqli_fetch_assoc($result))
     {
