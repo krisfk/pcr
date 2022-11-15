@@ -71,15 +71,17 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-
-$query = "SELECT * FROM traffic_record";
+$aid=$_GET['aid'];
+$query = "SELECT * FROM traffic_record WHERE post_id = $aid ";
 
 $result = mysqli_query($conn, $query);
 
 
     while($row = mysqli_fetch_assoc($result))
     {
-        
+     ?>
+
+    <?php   
     }
 
 
