@@ -63,9 +63,19 @@ require('../wp-load.php');
                         ?>
 
                     <li>
-                        <a href="#"><?php
+
+                        <div class="row">
+
+                            <div class="col-6"> <a href="#"><?php
                         echo get_the_title();
-                        ?></a>
+                        ?></a></div>
+                            <div class="col-6">
+                                <?php
+                                echo get_the_date();
+                                ?>
+                            </div>
+                        </div>
+
                     </li>
 
                     <?php
