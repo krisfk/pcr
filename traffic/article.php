@@ -62,9 +62,7 @@
 require('../wp-load.php');
 ?>
 
-    <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;' />
-    <span id='i' class="fa fa-calendar"></span>
-    <div id='ccc'></div>
+
 
     <div class="text-center mt-4">
         <h1>PCR website traffic records</h1>
@@ -88,7 +86,11 @@ require('../wp-load.php');
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                     value="option2" />
                 <label class="form-check-label" for="inlineRadio2">
-                    <div>fds</div>
+
+                    <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;' />
+                    <span id='i' class="fa fa-calendar"></span>
+                    <div id='ccc'></div>
+
                 </label>
             </div>
 
