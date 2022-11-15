@@ -162,7 +162,7 @@ get_header();
                                for($i=0;$i<count($open_to_paid_membership_codes_arr);$i++)
                                {
                                 // echo $i;
-                                if($open_to_paid_membership_codes_arr[$i]['paid_membership_code']=='ABCDEF')
+                                if($open_to_paid_membership_codes_arr[$i]['paid_membership_code']=='ABCDE')
                                 {
                                     $found=true;
                                 }
