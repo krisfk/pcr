@@ -22,7 +22,9 @@
 
 <body>
 
-    <h1>PCR website traffic records</h1>
+    <div class="text-center">
+        <h1>PCR website traffic records</h1>
+    </div>
 </body>
 
 </html>
