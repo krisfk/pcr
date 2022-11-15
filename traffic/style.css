@@ -47,7 +47,9 @@ h5 {
 .result-table-div {
     height: 100px;
     display: block;
-    overflow: auto;
+    margin: auto;
+    max-width: 1400px;
+    overflow-y: auto;
 }
 
 
