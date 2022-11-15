@@ -51,6 +51,8 @@ require('../wp-load.php');
                     'posts_per_page' => '-1',
                     'order' => 'DESC',
                 	'orderby' => 'date',
+                    'suppress_filters' => true
+
                     
                 );
                 
