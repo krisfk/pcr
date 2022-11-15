@@ -123,7 +123,10 @@ $result = mysqli_query($conn, $query);
 
         </div>
 
-        <div>Total Visits in the date range: <span class="visits-count"></span></div>
+        <div class="mt-4">
+            <h4>
+                Total Visits in the date range: <span class="visits-count"></span></h4>
+        </div>
     </div>
 
     <table class="container mt-4 result-table">
