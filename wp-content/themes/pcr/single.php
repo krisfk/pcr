@@ -177,7 +177,10 @@ get_header();
             <div class="mb-5 text-center">
                 <?php                     
                     echo '這個帳號沒有閱讀本文章<b>('.get_the_title().')</b>的權限，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
-                    ?>
+                   
+                    echo "The time is " . date("h:i:sa");
+
+                   ?>
             </div>
         </div>
         <?php
