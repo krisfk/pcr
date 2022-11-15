@@ -86,7 +86,7 @@ get_header();
 
 
             <div class="mb-5 text-center">
-                <?php                     echo '本文章<b>('.get_the_title().')</b>需要申請成為PCR員會才可閱讀。';
+                <?php                     echo '本文章<b>('.get_the_title().')</b>需要申請成為PCR員會才可閱讀，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
 ?>
             </div>
             <div class="single-login-form mb-5">
@@ -140,7 +140,7 @@ get_header();
         <div class="inner-container">
             <div class="mb-5 text-center">
                 <?php                     
-                echo '收費會員資格已過期，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>';
+                echo '收費會員資格已過期，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
                 ?>
             </div>
         </div>
