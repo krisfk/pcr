@@ -76,7 +76,7 @@ require('../wp-load.php');
                                 ?>
                             </div>
                             <div class="col-2">
-                                <a href="<?php echo get_permalink();?>">link</a>
+                                <a target="_blank" href="<?php echo get_permalink();?>">link</a>
 
                             </div>
                         </div>
