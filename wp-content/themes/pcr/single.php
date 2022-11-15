@@ -245,9 +245,28 @@ if ($conn->connect_error) {
 // Datetime
 // IP
 // echo 'test';
-date_default_timezone_set('Asia/Hong_Kong');
 
-$sql = "INSERT INTO traffic_record (post_id, user_id , datetime,IP) VALUES ('11', '11', NOW(),'999')";
+
+$ip = "";
+
+if (!empty($_SERVER["HTTP_CLIENT_IP"]))
+{
+    // Check for IP address from shared Internet
+    $ip = $_SERVER["HTTP_CLIENT_IP"];
+}
+elseif (!empty($_SERVER["HTTP_X_FORWARDED_FOR"]))
+{
+    // Check for the proxy user
+    $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+}
+else
+{
+    $ip = $_SERVER["REMOTE_ADDR"];
+}
+// echo $ip;
+
+
+$sql = "INSERT INTO traffic_record (post_id, user_id , datetime,IP) VALUES (".get_the_ID().",".$_SESSION['user_id'].",NOW(),$ip)";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
