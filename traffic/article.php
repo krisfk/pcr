@@ -36,8 +36,8 @@
 
 
     <script type="text/javascript">
-    $from_date = $_GET['from_date'];
-    $to_date = $_GET['to_date'];
+    $from_date = $_GET['from_date'] ? $_GET['from_date'] : date("Y-m-d");
+    $to_date = $_GET['to_date'] ? $_GET['to_date'] : date("Y-m-d");
 
     $(function() {
         $('#i').dateRangePicker({
