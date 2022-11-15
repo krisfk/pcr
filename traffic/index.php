@@ -22,7 +22,7 @@
 
 <body>
 
-    <div class="text-center">
+    <div class="text-center mt-4">
         <h1>PCR website traffic records</h1>
     </div>
 </body>
