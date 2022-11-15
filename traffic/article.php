@@ -76,7 +76,7 @@ require('../wp-load.php');
 
         <div>
             <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;'
-                value="12/12/2022 - 12/12/2022" />
+                value="<?php echo date("Y/m/d");?> - <?php echo date("Y/m/d");?>" />
             <span id='i' class="fa fa-calendar"></span>
             <div id='ccc'></div>
 
