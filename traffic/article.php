@@ -47,9 +47,7 @@ require('../wp-load.php');
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                     value="option2" />
                 <label class="form-check-label" for="inlineRadio2">
-
-                    <label for="from_date">from date</label> <input class="form-control d-inline-block" type="text"
-                        id="from_date">
+                    <div>fds</div>
                 </label>
             </div>
 
