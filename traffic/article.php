@@ -48,7 +48,7 @@ require('../wp-load.php');
                     value="option2" />
                 <label class="form-check-label" for="inlineRadio2">
 
-                    <label for="from_date">from date</label> <input type="text" id="from_date">
+                    <label for="from_date">from date</label> <input class="form-control" type="text" id="from_date">
                 </label>
             </div>
 
