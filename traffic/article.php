@@ -33,7 +33,7 @@ require('../wp-load.php');
         
         $post_id=$_GET['aid'];
         ?>
-        <div>Article:<?php echo get_the_title($post_id);?></div>
+        <h2>Traffic of <?php echo get_the_title($post_id);?></h2>
     </div>
 
     <div class="container mt-4">
