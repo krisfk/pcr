@@ -29,7 +29,11 @@ require('../wp-load.php');
         <h1>PCR website traffic records</h1>
         Today is <?php echo date("Y/m/d");?>
 
-        <div>fdsf</div>
+        <?php
+        
+        $post_id=$_GET['aid'];
+        ?>
+        <div>Article:<?php echo get_the_title($post_id);?></div>
     </div>
 
     <div class="container mt-4">
