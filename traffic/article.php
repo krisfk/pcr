@@ -62,6 +62,8 @@
 
     <?php
 require('../wp-load.php');
+require('./db-config.php');
+
 ?>
 
 
@@ -113,128 +115,18 @@ require('../wp-load.php');
 
     <div class="container mt-4">
 
-        <div class="row justify-content-center  gx-3">
+        <div class="row justify-content-center">
+
+            <?php
+        
+     
+   
+    
+    
+    ?>
+            <div class=""></div>
 
 
-            <div class="col-5 articles-col blk">
-                <h5>Articles(<span class="num"></span>)
-
-                    <?php
-                
-                ?>
-
-                </h5>
-                <ul>
-
-                    <?php
-
-                $query_args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => '-1',
-                    'ignore_custom_sort' => true
-                );
-                // 
-                // The Query
-                $the_query = new WP_Query( $query_args );
-                
-                // The Loop
-                
-                if ( $the_query->have_posts() ) {
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post();
-                        ?>
-
-                    <li>
-
-                        <div class="row">
-
-                            <div class="col-6"> <a href="<?php echo 'article.php?aid='.get_the_ID();?>"><?php
-                              echo get_the_title();
-                        ?></a></div>
-                            <div class="col-4">
-                                <?php
-                                echo get_the_date();
-                                ?>
-                            </div>
-                            <div class="col-2">
-                                <a target="_blank" href="<?php echo get_permalink();?>">link</a>
-
-                            </div>
-                        </div>
-
-                    </li>
-
-                    <?php
-                    }
-                    /* Restore original Post Data */
-                    wp_reset_postdata();
-                } else {
-                    // no posts found
-                }
-
-
-                
-                
-                ?>
-                </ul>
-            </div>
-            <div class="col-5 blk member-col">
-                <h5>Members(<span class="num"></span>)</h5>
-
-                <ul>
-                    <?php
-                
-                $query_args = array(
-                    'posts_per_page' => '-1',
-                    'post_type' => 'member',
-                    'order' => 'DESC',
-                    'orderby' => 'date',
-                );
-                
-                // The Query
-                $the_query = new WP_Query( $query_args );
-                
-                // The Loop
-                
-                if ( $the_query->have_posts() ) {
-                    while ( $the_query->have_posts() ) {
-                        $the_query->the_post();
-                        ?>
-
-
-                    <li>
-                        <div class="row">
-
-                            <div class="col-4">
-                                <a href="./member.php?mid=<?php echo get_the_ID();?>">
-                                    <?php 
-                                
-                                
-                                echo get_field('account_name');?></a>
-                            </div>
-                            <div class="col-8">
-                                <a href="./member.php?mid=<?php echo get_the_ID();?>">
-
-                                    <?php echo get_field('email');?>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <?php
-                    }
-                    ?>
-
-                    <?php
-                    /* Restore original Post Data */
-                    wp_reset_postdata();
-                } else {
-                    // no posts found
-                }
-                
-                ?>
-                </ul>
-            </div>
         </div>
     </div>
 

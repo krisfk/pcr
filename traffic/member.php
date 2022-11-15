@@ -24,7 +24,7 @@
 
     <?php
 require('../wp-load.php');
-?>
+    ?>
     <div class="text-center mt-4">
         <h1>PCR website traffic records</h1>
         Today is <?php echo date("Y/m/d");?>

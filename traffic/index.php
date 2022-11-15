@@ -24,6 +24,8 @@
 
     <?php
 require('../wp-load.php');
+require('./db-config.php');
+
 ?>
     <div class="text-center mt-4">
         <h1>PCR website traffic records</h1>
