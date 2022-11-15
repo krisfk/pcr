@@ -31,7 +31,7 @@ require('../wp-load.php');
 
     <div class="container">
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center  gx-3">
 
 
             <div class="col-5 articles-col blk">
