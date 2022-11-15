@@ -56,8 +56,8 @@
                 var from_date = date_arr[0];
                 var to_date = date_arr[2];
 
-                window.location =
-                    '<?php echo get_site_url().'/traffic/article.php?aid='.$_GET['aid'].'&from_date='.$from_date.'&to_date='.$to_date;?>';
+                // window.location =
+                //     '<?php echo get_site_url().'/traffic/article.php?aid='.$_GET['aid'].'&from_date='.$from_date.'&to_date='.$to_date;?>';
             })
     })
     </script>
