@@ -64,7 +64,20 @@
 require('../wp-load.php');
 // require('./db-config.php');
 
-require('../db-config.php');
+// require('../db-config.php');
+
+$servername = TRAFFIC_SERVER_NAME;
+    $username = TRAFFIC_USER_NAME;
+    $password = TRAFFIC_PASSWORD;
+    $dbname = TRAFFIC_DBNAME;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
 
 $query = "SELECT * FROM traffic_record";
 

@@ -228,9 +228,7 @@ get_header();
 if($show_article)
 {
 
-    //  require('../db-config.php');
 
-    // echo TEST;
     
     $servername = TRAFFIC_SERVER_NAME;
     $username = TRAFFIC_USER_NAME;
