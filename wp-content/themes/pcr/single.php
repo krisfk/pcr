@@ -124,6 +124,7 @@ get_header();
                         
                         if(get_field('paid_membership',$_SESSION['user_id']))
                         {
+                            echo 'check expire';
                                 //check expire
                         }
                         else
