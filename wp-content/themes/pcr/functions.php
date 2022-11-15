@@ -1324,7 +1324,7 @@ function add_slug_body_class( $classes ) {
 
 
 
-	require('https://perspectivecr.org/traffic/db-config.php');
+	// require('https://perspectivecr.org/traffic/db-config.php');
 	
 	
 
