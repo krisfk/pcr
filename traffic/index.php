@@ -49,6 +49,7 @@ require('../wp-load.php');
                 $query_args = array(
                     'post_type' => 'post',
                     'posts_per_page' => '-1',
+                    'ignore_custom_sort' => true
                     // 'order' => 'ASC',
                 	// 'orderby' => 'post_date',
                     // 'suppress_filters' => true
