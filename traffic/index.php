@@ -95,8 +95,8 @@ require('../wp-load.php');
             <div class="col-5 blk">
                 <h5>Members()</h5>
 
-
-                <?php
+                <ul>
+                    <?php
                 
                 $query_args = array(
                     'posts_per_page' => '-1',
@@ -109,11 +109,28 @@ require('../wp-load.php');
                 $the_query = new WP_Query( $query_args );
                 
                 // The Loop
+                
                 if ( $the_query->have_posts() ) {
                     while ( $the_query->have_posts() ) {
                         $the_query->the_post();
                         ?>
-                1
+
+
+                    <li>
+                        <div class="row">
+
+                            <div class="col-4">
+                                <?php echo get_field('account_name');?>
+                            </div>
+                            <div class="col-4">
+                                <?php echo get_field('email');?>
+
+                            </div>
+                            <div class="col-4"> <?php echo get_field('tel');?>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
                 <?php
                     }
                     ?>
@@ -126,7 +143,7 @@ require('../wp-load.php');
                 }
                 
                 ?>
-
+                </ul>
             </div>
         </div>
     </div>
