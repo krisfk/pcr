@@ -58,7 +58,7 @@
 
                 window.location =
                     'https://perspectivecr.org/traffic/article.php?aid=<?php echo $_GET['aid'];?>' +
-                    '&from_date=' + from_date + '&to_date=' + to_date ';
+                    '&from_date=' + from_date + '&to_date=' + to_date;
             })
     })
     </script>
