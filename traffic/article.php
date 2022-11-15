@@ -75,7 +75,8 @@ require('../wp-load.php');
         <h4 class="mt-4">Traffic of <?php echo get_the_title($post_id);?></h4>
 
         <div>
-            <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;' />
+            <input id='out' placeholder="mm/dd/yy to mm/dd/yy" style='font-size: 14pt; width: 20em;'
+                value="12/12/2022 - 12/12/2022" />
             <span id='i' class="fa fa-calendar"></span>
             <div id='ccc'></div>
 
