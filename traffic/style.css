@@ -4,11 +4,15 @@ ul {
 }
 
 ul li {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
 }
 
 ul li a {
     color: #000;
     text-decoration: underline;
+}
+
+h5 {
+    font-weight: bold;
 }
