@@ -115,7 +115,7 @@ $result = mysqli_query($conn, $query);
         <div>
 
             <input id='out' placeholder="yy-mm-dd to yy-mm-dd" style='font-size: 14pt; width: 20em;'
-                value="<?php echo date("Y-m-d");?> to <?php echo date("Y-m-d");?>" />
+                value="<?php echo $from_date;?> to <?php echo $to_date;?>" />
             <span id='i' class="fa fa-calendar"></span>
             <div id='ccc'></div>
 
