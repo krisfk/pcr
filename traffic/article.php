@@ -108,17 +108,17 @@ $result = mysqli_query($conn, $query);
 
     <div class="container mt-4">
 
-        <div class="row">
+        <div class="row justify-content-center">
             <?php
     while($row = mysqli_fetch_assoc($result))
     {
      ?>
 
-            <div class="col-3"><?php echo $row['user_id'] == 0 ? '無登入':get_field('account_name',$row['user_id']);?>
+            <div class="col-2"><?php echo $row['user_id'] == 0 ? '無登入':get_field('account_name',$row['user_id']);?>
             </div>
             <div class="col-3"><?php echo $row['user_id'] == 0 ? '-':get_field('email',$row['user_id']);?></div>
-            <div class="col-3"><?php echo $row['datetime'];?></div>
-            <div class="col-3"><?php echo $row['IP'];?></div>
+            <div class="col-2"><?php echo $row['datetime'];?></div>
+            <div class="col-2"><?php echo $row['IP'];?></div>
 
             <?php   
     }
