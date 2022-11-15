@@ -63,7 +63,7 @@
                 var to_date = date_arr[2];
 
                 window.location =
-                    'https://perspectivecr.org/traffic/article.php?aid=<?php echo $_GET['aid'];?>' +
+                    'https://perspectivecr.org/traffic/member.php?mid=<?php echo $_GET['mid'];?>' +
                     '&from_date=' + from_date + '&to_date=' + to_date;
             })
     })
