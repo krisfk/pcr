@@ -148,10 +148,15 @@ get_header();
                             else
                             {
                            
+                                //check paid_member_code
+                                $paid_member_code = get_field('pay_membership_code',$_SESSION['user_id']);
+                                 
+                                //Open to paid membership codes
+
+                                // $article_open_to_paid_membership_codes=get_field)
                                 
-                                //check paid member
-                                $show_article=true;
-                           
+                                $open_to_paid_membership_codes_arr = get_field('open_to_paid_membership_codes');
+                                print_r($open_to_paid_membership_codes_arr);
                                 
 
                             }
