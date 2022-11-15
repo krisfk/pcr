@@ -124,21 +124,29 @@ get_header();
                         
                         if(get_field('paid_membership',$_SESSION['user_id']))
                         {
-                            // echo 'check expire';
-                            // echo get_field('paid_membership_expiry_date',$_SESSION['user_id']);
-                               
-
-                            // $today = new DateTime("today"); 
+                            // check expire
                             
                             $today = date("d/m/Y");
                             $expiry_date = get_field('paid_membership_expiry_date',$_SESSION['user_id']);
 
                             if ($expiry_date < $today) {
-                                    echo 1;
+                                $show_article=true;
                             }
                             else
                             {
-                                echo 0;
+                                $show_article=false;
+                                ?>
+
+        <div class="inner-container">
+            <div class="mb-5 text-center">
+                <?php                     
+                echo '收費會員資格已過期，如有任何問題請<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>';
+                ?>
+            </div>
+        </div>
+
+        <?php
+
                             }
 
                         }
