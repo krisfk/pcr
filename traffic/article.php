@@ -36,6 +36,9 @@
 
 
     <script type="text/javascript">
+    $from_date = $_GET['from_date'];
+    $to_date = $_GET['to_date'];
+
     $(function() {
         $('#i').dateRangePicker({
                 inline: true,
@@ -46,7 +49,7 @@
                 showTopbar: false,
                 setValue: function(s) {
 
-                    // $(this).val('12-01-2017');
+                    $(this).val('<?php echo $from_date.' to '.$to_date;?>');
                 }
             })
             .bind('datepicker-change', (e, data) => {
