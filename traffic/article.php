@@ -122,9 +122,11 @@ $result = mysqli_query($conn, $query);
 
 
         </div>
+
+        <div>Total Visits in the date range: <span class="visits-count"></span></div>
     </div>
 
-    <table class="container mt-4">
+    <table class="container mt-4 result-table">
 
         <?php
     while($row = mysqli_fetch_assoc($result))
@@ -151,9 +153,8 @@ $result = mysqli_query($conn, $query);
         <script type="text/javascript">
         $(function() {
 
-            $('.articles-col .num').html($('.articles-col ul li').length)
+            $('.visits-count').html($('.result-table tr').length);
 
-            $('.member-col .num').html($('.member-col ul li').length)
 
 
         })
