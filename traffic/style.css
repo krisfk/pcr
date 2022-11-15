@@ -23,3 +23,7 @@ h5 {
     border-radius: 1rem;
     margin: 0 1rem;
 }
+
+.member-col ul li {
+    list-style-type: none;
+}

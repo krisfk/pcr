@@ -92,7 +92,7 @@ require('../wp-load.php');
                 ?>
                 </ul>
             </div>
-            <div class="col-5 blk">
+            <div class="col-5 blk member-col">
                 <h5>Members()</h5>
 
                 <ul>
