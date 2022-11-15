@@ -62,6 +62,9 @@
 
     <?php
 require('../wp-load.php');
+date_default_timezone_set('Asia/Hong_Kong');
+
+
 $servername = TRAFFIC_SERVER_NAME;
 $username = TRAFFIC_USER_NAME;
 $password = TRAFFIC_PASSWORD;
@@ -92,10 +95,7 @@ $result = mysqli_query($conn, $query);
                 href="<?php echo get_permalink($post_id);?>">link</a>)</h4>
 
         <div>
-            <?php
-            date_default_timezone_set('Asia/Hong_Kong');
 
-            ?>
             <input id='out' placeholder="yy-mm-dd to yy-mm-dd" style='font-size: 14pt; width: 20em;'
                 value="<?php echo date("Y-m-d");?> to <?php echo date("Y-m-d");?>" />
             <span id='i' class="fa fa-calendar"></span>
