@@ -52,5 +52,10 @@ h5 {
     overflow-y: auto;
 }
 
+a {
+    color: #000;
+    text-decoration: underline;
+}
+
 
 /*  */
