@@ -59,7 +59,13 @@ require('../wp-load.php');
                     while ( $the_query->have_posts() ) {
                         $the_query->the_post();
                         ?>
-                1
+                <ul>
+                    <li>
+                        <a href="#"><?php
+                        echo get_the_title();
+                        ?></a>
+                    </li>
+                </ul>
                 <?php
                     }
                     /* Restore original Post Data */
