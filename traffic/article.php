@@ -35,10 +35,13 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.14.2/daterangepicker.min.css">
 
 
+    <?php
+        
+        $from_date = $_GET['from_date'] ? $_GET['from_date'] : date("Y-m-d");
+        $to_date = $_GET['to_date'] ? $_GET['to_date'] : date("Y-m-d");
+    
+        ?>
     <script type="text/javascript">
-    $from_date = $_GET['from_date'] ? $_GET['from_date'] : date("Y-m-d");
-    $to_date = $_GET['to_date'] ? $_GET['to_date'] : date("Y-m-d");
-
     $(function() {
         $('#i').dateRangePicker({
                 inline: true,
