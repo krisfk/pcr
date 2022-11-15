@@ -108,11 +108,11 @@ $result = mysqli_query($conn, $query);
 
     <div class="container mt-4">
 
-        <div class="row justify-content-center">
-            <?php
+        <?php
     while($row = mysqli_fetch_assoc($result))
     {
      ?>
+        <div class="row justify-content-center">
 
             <div class="col-2"><?php echo $row['user_id'] == 0 ? '無登入':get_field('account_name',$row['user_id']);?>
             </div>
@@ -120,13 +120,13 @@ $result = mysqli_query($conn, $query);
             <div class="col-2"><?php echo $row['datetime'];?></div>
             <div class="col-2"><?php echo $row['IP'];?></div>
 
-            <?php   
+        </div>
+        <?php   
     }
 
 
 
 ?>
-        </div>
     </div>
 
 
