@@ -39,7 +39,7 @@ session_start();
     <script type="text/javascript">
     $(function() {
 
-        $('.paid-items').closest('li').fadeOut(0);
+        // $('.paid-items').closest('li').fadeOut(0);
     })
     </script>
     <?php 
