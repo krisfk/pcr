@@ -132,8 +132,12 @@ get_header();
                             // echo $today;
                             // echo $expiry_date;
 
-                            $dateTimestamp1 = strtotime($today);
-                            $dateTimestamp2 = strtotime($expiry_date);
+                            // $dateTimestamp1 = strtotime($today);
+                            // $dateTimestamp2 = strtotime($expiry_date);
+
+                            $dateTimestamp1 = implode('', array_reverse(explode('/', $today)));
+                            $dateTimestamp2 = implode('', array_reverse(explode('/', $expiry_date)));
+
 
                             if ($dateTimestamp2 < $dateTimestamp1) {
                                 
