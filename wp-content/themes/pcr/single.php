@@ -129,6 +129,7 @@ get_header();
                             $today = date("d/m/Y");
                             $expiry_date = get_field('paid_membership_expiry_date',$_SESSION['user_id']);
 
+                            echo $today;
                             if ($expiry_date < $today) {
                                 
                                 $show_article=false;
