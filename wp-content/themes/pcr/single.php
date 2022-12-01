@@ -159,6 +159,13 @@ get_header();
         <div class="inner-container">
             <div class="mb-5 text-center">
                 <?php                     
+
+                        if(get_field('half_public_post'))
+                        {
+                            echo get_field('half_public_post_snipper_of_full_content');
+
+                        }
+
                                 echo '收費會員資格已過期，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
                                 ?>
             </div>
@@ -197,7 +204,14 @@ get_header();
                                 ?>
         <div class="inner-container">
             <div class="mb-5 text-center">
-                <?php                     
+                <?php                 
+                
+                if(get_field('half_public_post'))
+                {
+                    echo get_field('half_public_post_snipper_of_full_content');
+
+                }
+                
                     echo '這個帳號沒有閱讀本文章<b>('.get_the_title().')</b>的權限，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
                    
 
@@ -231,6 +245,13 @@ get_header();
         <div class="inner-container">
             <div class="mb-5 text-center">
                 <?php                     
+
+if(get_field('half_public_post'))
+{
+    echo get_field('half_public_post_snipper_of_full_content');
+
+}
+
                 echo '本文章<b>('.get_the_title().')</b>需要申請成為PCR付費員會才可閱讀。';
                 ?>
             </div>
