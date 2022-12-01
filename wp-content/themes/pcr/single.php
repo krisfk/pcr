@@ -80,6 +80,7 @@ get_header();
         // {
                 if(!$_SESSION['user_id'] && get_field('membership_only'))
                 {
+                    
                    ?>
         <div class="inner-container">
 
@@ -119,7 +120,7 @@ get_header();
 
                     $show_article=true;
 
-                    if(get_field('paid_membership_only'))
+                    if(get_field('paid_membership_only') && get_field('membership_only'))
                     {
                         
                         if(get_field('paid_membership',$_SESSION['user_id']))
@@ -320,12 +321,12 @@ $conn->close();
         ?>
 
             <div class="inner-container">
-                222
+
                 <?php
 
         if(get_field('half_public_post'))
         {
-            echo 111;
+            
           if(!$_SESSION['user_id'])
            {
 
