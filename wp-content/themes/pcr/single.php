@@ -87,7 +87,18 @@ get_header();
 
 
             <div class="mb-5 text-center">
-                <?php                     echo '本文章<b>('.get_the_title().')</b>需要申請成為PCR員會才可閱讀，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
+                <?php                 
+                
+                
+                if(get_field('half_public_post'))
+                {
+                    echo get_field('half_public_post_snipper_of_full_content');
+
+                }
+
+
+                
+                echo '本文章<b>('.get_the_title().')</b>需要申請成為PCR員會才可閱讀，如有任何問題可<a href="'.get_site_url().'/about-us/contact/">聯絡我們</a>。';
 ?>
             </div>
             <div class="single-login-form mb-5">
