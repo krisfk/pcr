@@ -325,6 +325,7 @@ $conn->close();
 
         if(get_field('half_public_post'))
         {
+            echo 111;
           if(!$_SESSION['user_id'])
            {
 
