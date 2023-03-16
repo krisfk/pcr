@@ -202,7 +202,7 @@ else
 {
     ?>
             <div class="mt-3">
-                <!-- <a class="login-a" href="<?php echo get_site_url();?>/registration/"> 會員註冊</a> -->
+                <a class="login-a" href="<?php echo get_site_url();?>/registration/"> 會員註冊</a>
 
                 <a class="login-a" href="<?php echo get_site_url();?>/member-login/"> 會員登入</a>
                 <!-- <a class="login-a" href="/forget-pw/"> 忘記密碼</a> -->
